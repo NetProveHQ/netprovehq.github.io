@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://netprovehq.github.io/sitemap.xml
