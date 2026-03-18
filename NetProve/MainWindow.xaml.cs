@@ -151,6 +151,7 @@ namespace NetProve
                 ["Speed"]     = PageSpeed,
                 ["Reports"]   = PageReports,
                 ["Devices"]   = PageDevices,
+                ["Settings"]  = PageSettings,
             };
         }
 
@@ -173,6 +174,7 @@ namespace NetProve
             if (tag == "Processes") _vm.RefreshProcessesCommand.Execute(null);
             if (tag == "Cache")     _vm.ScanCachesCommand.Execute(null);
             if (tag == "Reports")   UpdateReportsPage();
+            if (tag == "Settings")  { UpdatePinLabels(); UpdateThemeToggleLabel(ThemeManager.Current); }
         }
 
         // ── System metrics UI ────────────────────────────────────────────────
@@ -511,11 +513,11 @@ namespace NetProve
 
         private void UpdateThemeToggleLabel(ThemeMode mode)
         {
-            if (ThemeToggleText == null) return;
-            if (mode == ThemeMode.Dark)
-                ThemeToggleText.Text = "\u2600 " + _loc["LightMode"];
-            else
-                ThemeToggleText.Text = "\u263D " + _loc["DarkMode"];
+            var text = mode == ThemeMode.Dark
+                ? "\u2600 " + _loc["LightMode"]
+                : "\u263D " + _loc["DarkMode"];
+            if (ThemeToggleText != null) ThemeToggleText.Text = text;
+            if (TbSettingsTheme != null) TbSettingsTheme.Text = text;
         }
 
         // ── Pin to Taskbar (via Start Menu shortcut) ─────────────────────────
@@ -649,11 +651,20 @@ namespace NetProve
         {
             _suppressLangChange = true;
             CmbLanguage.Items.Clear();
+            CmbLanguageSettings?.Items.Clear();
             foreach (var lang in Enum.GetValues<AppLanguage>())
             {
                 var flag = LocalizationManager.LanguageFlags[lang];
                 var name = LocalizationManager.LanguageNames[lang];
-                CmbLanguage.Items.Add(new ComboBoxItem
+                var item = new ComboBoxItem
+                {
+                    Content = $"{flag}  {name}",
+                    Tag = lang,
+                    Foreground = ThemeManager.GetBrush("TextPrimary"),
+                    FontSize = 12
+                };
+                CmbLanguage.Items.Add(item);
+                CmbLanguageSettings?.Items.Add(new ComboBoxItem
                 {
                     Content = $"{flag}  {name}",
                     Tag = lang,
@@ -662,13 +673,22 @@ namespace NetProve
                 });
             }
             CmbLanguage.SelectedIndex = (int)selected;
+            if (CmbLanguageSettings != null) CmbLanguageSettings.SelectedIndex = (int)selected;
             _suppressLangChange = false;
         }
 
         private void CmbLanguage_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (_suppressLangChange || CmbLanguage.SelectedItem is not ComboBoxItem item) return;
+            if (_suppressLangChange) return;
+            // Determine which combobox triggered
+            var src = sender as System.Windows.Controls.ComboBox;
+            if (src?.SelectedItem is not ComboBoxItem item) return;
             if (item.Tag is not AppLanguage lang) return;
+
+            _suppressLangChange = true;
+            CmbLanguage.SelectedIndex = (int)lang;
+            if (CmbLanguageSettings != null) CmbLanguageSettings.SelectedIndex = (int)lang;
+            _suppressLangChange = false;
 
             _loc.Apply(lang, Resources);
             UpdateThemeToggleLabel(ThemeManager.Current);

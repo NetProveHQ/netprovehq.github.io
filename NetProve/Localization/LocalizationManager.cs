@@ -71,6 +71,7 @@ namespace NetProve.Localization
                 ["NavLag"] = "  Lag Analysis",
                 ["NavSpeed"] = "  Speed Test",
                 ["NavReports"] = "  Reports",
+                ["NavSettings"] = "⚙  Settings",
 
                 // Theme
                 ["LightMode"] = "Light Mode",
@@ -155,6 +156,13 @@ namespace NetProve.Localization
                 ["PinnedToTaskbar"] = "Pinned to Start Menu (right-click to pin to taskbar)",
                 ["AddedToStartup"] = "NetProve will start with Windows",
                 ["RemovedFromStartup"] = "NetProve will no longer start with Windows",
+                ["SettingsTitle"] = "Settings",
+                ["SettingsDesc"] = "Customize application preferences and system integration.",
+                ["SettingsTheme"] = "Appearance",
+                ["SettingsTaskbar"] = "Taskbar Shortcut",
+                ["SettingsTaskbarDesc"] = "Create a Start Menu shortcut so you can pin NetProve to the taskbar.",
+                ["SettingsStartup"] = "Start with Windows",
+                ["SettingsStartupDesc"] = "Automatically launch NetProve when Windows starts.",
 
                 // Gaming
                 ["GamingMode"] = "Gaming Mode",
@@ -449,6 +457,7 @@ namespace NetProve.Localization
                 ["NavLag"] = "  Gecikme Analizi",
                 ["NavSpeed"] = "  Hız Testi",
                 ["NavReports"] = "  Raporlar",
+                ["NavSettings"] = "⚙  Ayarlar",
 
                 ["LightMode"] = "Açık Tema",
                 ["DarkMode"] = "Koyu Tema",
@@ -526,6 +535,13 @@ namespace NetProve.Localization
                 ["PinnedToTaskbar"] = "Başlat menüsüne eklendi (görev çubuğuna sabitlemek için sağ tıklayın)",
                 ["AddedToStartup"] = "NetProve Windows ile birlikte başlayacak",
                 ["RemovedFromStartup"] = "NetProve artık Windows ile başlamayacak",
+                ["SettingsTitle"] = "Ayarlar",
+                ["SettingsDesc"] = "Uygulama tercihlerini ve sistem entegrasyonunu özelleştirin.",
+                ["SettingsTheme"] = "Görünüm",
+                ["SettingsTaskbar"] = "Görev Çubuğu Kısayolu",
+                ["SettingsTaskbarDesc"] = "Başlat menüsüne kısayol oluşturarak NetProve'u görev çubuğuna sabitleyebilirsiniz.",
+                ["SettingsStartup"] = "Windows ile Başlat",
+                ["SettingsStartupDesc"] = "Windows açıldığında NetProve otomatik olarak başlasın.",
 
                 ["GamingMode"] = "Oyun Modu",
                 ["ActiveGame"] = "Aktif Oyun",
@@ -799,6 +815,7 @@ namespace NetProve.Localization
                 ["NavLag"] = "  延迟分析",
                 ["NavSpeed"] = "  速度测试",
                 ["NavReports"] = "  报告",
+                ["NavSettings"] = "⚙  设置",
 
                 ["LightMode"] = "浅色模式",
                 ["DarkMode"] = "深色模式",
@@ -876,6 +893,13 @@ namespace NetProve.Localization
                 ["PinnedToTaskbar"] = "已添加到开始菜单（右键单击可固定到任务栏）",
                 ["AddedToStartup"] = "NetProve 将随 Windows 启动",
                 ["RemovedFromStartup"] = "NetProve 将不再随 Windows 启动",
+                ["SettingsTitle"] = "设置",
+                ["SettingsDesc"] = "自定义应用程序首选项和系统集成。",
+                ["SettingsTheme"] = "外观",
+                ["SettingsTaskbar"] = "任务栏快捷方式",
+                ["SettingsTaskbarDesc"] = "创建开始菜单快捷方式，以便将 NetProve 固定到任务栏。",
+                ["SettingsStartup"] = "随 Windows 启动",
+                ["SettingsStartupDesc"] = "Windows 启动时自动启动 NetProve。",
 
                 ["GamingMode"] = "游戏模式",
                 ["ActiveGame"] = "当前游戏",
@@ -1148,6 +1172,7 @@ namespace NetProve.Localization
                 ["NavLag"] = "  ラグ分析",
                 ["NavSpeed"] = "  速度テスト",
                 ["NavReports"] = "  レポート",
+                ["NavSettings"] = "⚙  設定",
 
                 ["LightMode"] = "ライトモード",
                 ["DarkMode"] = "ダークモード",
@@ -1225,6 +1250,13 @@ namespace NetProve.Localization
                 ["PinnedToTaskbar"] = "スタートメニューに追加しました（右クリックでタスクバーにピン留め）",
                 ["AddedToStartup"] = "NetProve は Windows と一緒に起動します",
                 ["RemovedFromStartup"] = "NetProve は Windows と一緒に起動しなくなります",
+                ["SettingsTitle"] = "設定",
+                ["SettingsDesc"] = "アプリの設定とシステム統合をカスタマイズします。",
+                ["SettingsTheme"] = "外観",
+                ["SettingsTaskbar"] = "タスクバーショートカット",
+                ["SettingsTaskbarDesc"] = "スタートメニューにショートカットを作成し、NetProve をタスクバーにピン留めできます。",
+                ["SettingsStartup"] = "Windows と一緒に起動",
+                ["SettingsStartupDesc"] = "Windows 起動時に NetProve を自動的に起動します。",
 
                 ["GamingMode"] = "ゲームモード",
                 ["ActiveGame"] = "アクティブゲーム",
@@ -1497,6 +1529,7 @@ namespace NetProve.Localization
                 ["NavLag"] = "  Análisis de Lag",
                 ["NavSpeed"] = "  Test de Velocidad",
                 ["NavReports"] = "  Informes",
+                ["NavSettings"] = "⚙  Ajustes",
 
                 ["LightMode"] = "Modo Claro",
                 ["DarkMode"] = "Modo Oscuro",
@@ -1574,6 +1607,13 @@ namespace NetProve.Localization
                 ["PinnedToTaskbar"] = "Agregado al menú Inicio (clic derecho para anclar a la barra de tareas)",
                 ["AddedToStartup"] = "NetProve se iniciará con Windows",
                 ["RemovedFromStartup"] = "NetProve ya no se iniciará con Windows",
+                ["SettingsTitle"] = "Ajustes",
+                ["SettingsDesc"] = "Personaliza las preferencias de la aplicación y la integración del sistema.",
+                ["SettingsTheme"] = "Apariencia",
+                ["SettingsTaskbar"] = "Acceso directo en barra de tareas",
+                ["SettingsTaskbarDesc"] = "Crea un acceso directo en el menú Inicio para anclar NetProve a la barra de tareas.",
+                ["SettingsStartup"] = "Iniciar con Windows",
+                ["SettingsStartupDesc"] = "Iniciar NetProve automáticamente cuando Windows arranque.",
 
                 ["GamingMode"] = "Modo Juego",
                 ["ActiveGame"] = "Juego Activo",
@@ -1846,6 +1886,7 @@ namespace NetProve.Localization
                 ["NavLag"] = "  Анализ задержки",
                 ["NavSpeed"] = "  Тест скорости",
                 ["NavReports"] = "  Отчёты",
+                ["NavSettings"] = "⚙  Настройки",
 
                 ["LightMode"] = "Светлая тема",
                 ["DarkMode"] = "Тёмная тема",
@@ -1923,6 +1964,13 @@ namespace NetProve.Localization
                 ["PinnedToTaskbar"] = "Добавлено в меню Пуск (щёлкните правой кнопкой, чтобы закрепить на панели задач)",
                 ["AddedToStartup"] = "NetProve будет запускаться вместе с Windows",
                 ["RemovedFromStartup"] = "NetProve больше не будет запускаться вместе с Windows",
+                ["SettingsTitle"] = "Настройки",
+                ["SettingsDesc"] = "Настройте параметры приложения и интеграцию с системой.",
+                ["SettingsTheme"] = "Внешний вид",
+                ["SettingsTaskbar"] = "Ярлык на панели задач",
+                ["SettingsTaskbarDesc"] = "Создайте ярлык в меню «Пуск», чтобы закрепить NetProve на панели задач.",
+                ["SettingsStartup"] = "Запуск вместе с Windows",
+                ["SettingsStartupDesc"] = "Автоматически запускать NetProve при старте Windows.",
 
                 ["GamingMode"] = "Игровой режим",
                 ["ActiveGame"] = "Активная игра",

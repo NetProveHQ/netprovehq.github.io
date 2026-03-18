@@ -534,33 +534,14 @@
                                  GroupName="Nav" Checked="NavBtn_Checked" Tag="Speed"/>
                     <RadioButton Content="{DynamicResource S_NavReports}" Style="{StaticResource NavBtn}"
                                  GroupName="Nav" Checked="NavBtn_Checked" Tag="Reports"/>
+                    <RadioButton Content="{DynamicResource S_NavSettings}" Style="{StaticResource NavBtn}"
+                                 GroupName="Nav" Checked="NavBtn_Checked" Tag="Settings"/>
 
                 </StackPanel>
 
-                <!-- Language + Theme toggle -->
-                <Border DockPanel.Dock="Bottom" Margin="12,4,12,4">
-                    <StackPanel>
-                        <TextBlock Text="{DynamicResource S_Language}" Style="{StaticResource Sub}"
-                                   FontSize="10" FontWeight="SemiBold" Margin="4,0,0,4"/>
-                        <ComboBox x:Name="CmbLanguage" SelectionChanged="CmbLanguage_SelectionChanged"
-                                  Height="30" FontSize="12"/>
-                        <TextBlock x:Name="ThemeToggleText" Margin="4,10,0,2"
-                                   FontSize="13" Cursor="Hand"
-                                   Foreground="{DynamicResource TextPrimary}"
-                                   MouseLeftButtonUp="BtnThemeToggle_Click"
-                                   Text=""/>
-                        <TextBlock x:Name="TbPinTaskbar" Margin="4,6,0,0"
-                                   FontSize="13" Cursor="Hand"
-                                   Foreground="{DynamicResource TextPrimary}"
-                                   MouseLeftButtonUp="BtnPinTaskbar_Click"
-                                   Text=""/>
-                        <TextBlock x:Name="TbRunAtStartup" Margin="4,6,0,0"
-                                   FontSize="13" Cursor="Hand"
-                                   Foreground="{DynamicResource TextPrimary}"
-                                   MouseLeftButtonUp="BtnRunAtStartup_Click"
-                                   Text=""/>
-                    </StackPanel>
-                </Border>
+                <!-- Hidden references for code-behind -->
+                <ComboBox x:Name="CmbLanguage" SelectionChanged="CmbLanguage_SelectionChanged" Visibility="Collapsed"/>
+                <TextBlock x:Name="ThemeToggleText" Visibility="Collapsed"/>
 
                 <!-- Bottom status -->
                 <Border DockPanel.Dock="Bottom" Margin="12,0,12,12"
@@ -1565,6 +1546,60 @@
                 </StackPanel>
 
                 <!-- ── PAGE: DEVICES ──────────────────────────────────── -->
+                <!-- ═══ Settings Page ═══ -->
+                <StackPanel x:Name="PageSettings" Visibility="Collapsed">
+                    <TextBlock Text="{DynamicResource S_SettingsTitle}" Style="{StaticResource H1}" Margin="0,0,0,8"/>
+                    <TextBlock Style="{StaticResource Sub}" Margin="0,0,0,20"
+                        Text="{DynamicResource S_SettingsDesc}"/>
+
+                    <!-- Language -->
+                    <Border Style="{StaticResource Card}" Margin="0,0,0,10">
+                        <StackPanel>
+                            <TextBlock Text="{DynamicResource S_Language}" FontSize="14" FontWeight="SemiBold"
+                                       Foreground="{DynamicResource TextPrimary}" Margin="0,0,0,8"/>
+                            <ComboBox x:Name="CmbLanguageSettings" SelectionChanged="CmbLanguage_SelectionChanged"
+                                      Height="30" FontSize="12" Width="200" HorizontalAlignment="Left"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Theme -->
+                    <Border Style="{StaticResource Card}" Margin="0,0,0,10">
+                        <StackPanel>
+                            <TextBlock Text="{DynamicResource S_SettingsTheme}" FontSize="14" FontWeight="SemiBold"
+                                       Foreground="{DynamicResource TextPrimary}" Margin="0,0,0,8"/>
+                            <TextBlock x:Name="TbSettingsTheme" FontSize="13" Cursor="Hand"
+                                       Foreground="{DynamicResource Accent}"
+                                       MouseLeftButtonUp="BtnThemeToggle_Click" Text=""/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Taskbar / Start Menu Pin -->
+                    <Border Style="{StaticResource Card}" Margin="0,0,0,10">
+                        <StackPanel>
+                            <TextBlock Text="{DynamicResource S_SettingsTaskbar}" FontSize="14" FontWeight="SemiBold"
+                                       Foreground="{DynamicResource TextPrimary}" Margin="0,0,0,4"/>
+                            <TextBlock Style="{StaticResource Sub}" FontSize="11" Margin="0,0,0,8"
+                                       Text="{DynamicResource S_SettingsTaskbarDesc}"/>
+                            <TextBlock x:Name="TbPinTaskbar" FontSize="13" Cursor="Hand"
+                                       Foreground="{DynamicResource Accent}"
+                                       MouseLeftButtonUp="BtnPinTaskbar_Click" Text=""/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Startup -->
+                    <Border Style="{StaticResource Card}" Margin="0,0,0,10">
+                        <StackPanel>
+                            <TextBlock Text="{DynamicResource S_SettingsStartup}" FontSize="14" FontWeight="SemiBold"
+                                       Foreground="{DynamicResource TextPrimary}" Margin="0,0,0,4"/>
+                            <TextBlock Style="{StaticResource Sub}" FontSize="11" Margin="0,0,0,8"
+                                       Text="{DynamicResource S_SettingsStartupDesc}"/>
+                            <TextBlock x:Name="TbRunAtStartup" FontSize="13" Cursor="Hand"
+                                       Foreground="{DynamicResource Accent}"
+                                       MouseLeftButtonUp="BtnRunAtStartup_Click" Text=""/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
                 <StackPanel x:Name="PageDevices" Visibility="Collapsed">
                     <TextBlock Text="{DynamicResource S_NetworkDevices}" Style="{StaticResource H1}" Margin="0,0,0,8"/>
                     <TextBlock Style="{StaticResource Sub}" Margin="0,0,0,16"
