@@ -607,19 +607,6 @@
              data-page-title="NetProve - Yorumlar"
              data-theme="dark"></div>
         <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
-        <script>
-          // Cusdis iframe auto-resize fallback — postMessage ile dinamik yükseklik
-          window.addEventListener('message', function(e) {
-            if (e.origin !== 'https://cusdis.com') return;
-            if (e.data && e.data.from === 'cusdis' && typeof e.data.height === 'number') {
-              var iframe = document.querySelector('#cusdis_thread iframe');
-              if (iframe) {
-                iframe.style.height = Math.max(e.data.height, 500) + 'px';
-                iframe.style.minHeight = Math.max(e.data.height, 500) + 'px';
-              }
-            }
-          });
-        </script>
       </div>
     </div>
   </section>

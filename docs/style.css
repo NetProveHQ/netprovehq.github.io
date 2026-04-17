@@ -465,14 +465,11 @@ ul { list-style: none; }
 }
 #cusdis_thread {
   width: 100%;
-  min-height: 500px;
 }
 #cusdis_thread iframe {
   width: 100% !important;
   border: 0 !important;
-  background: transparent !important;
   color-scheme: dark;
-  min-height: 500px !important;
   display: block;
 }
 
